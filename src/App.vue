@@ -1,23 +1,32 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router';
+import { RouterLink, RouterView } from "vue-router";
+import MainView from "./views/MainView.vue";
 </script>
 
 <template>
-    <div class="view">
-        <RouterView />
-    </div>
+	<!-- <RouterLink to="/">Home</RouterLink>
+	<RouterLink to="/settings">Settings</RouterLink> -->
+	<div class="menuBarContainer">COUCOU c'est la navbar qui est une div</div>
+	<div class="sideBarContainer"></div>
+	<div class="view">
+		<MainView />
+	</div>
 </template>
 
-<style scoped>
-.logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
+<style>
+#app {
+	font-family: Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	color: aliceblue;
 }
-.logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+.menuBarContainer {
+	background-color: rgb(48, 45, 45);
+	min-height: 64px;
 }
-.logo.vue:hover {
-    filter: drop-shadow(0 0 2em #42b883aa);
+.sideBarContainer {
+	background-color: rgb(48, 45, 45);
+	min-height: 1080px;
+	min-width: 64px;
+	max-width: 64px;
 }
 </style>

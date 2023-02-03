@@ -4,9 +4,11 @@ import vue from "@vitejs/plugin-vue";
 // https://vitejs.dev/config/
 export default defineConfig({
 	test: {
-		coverage: {
-			reporter: ["text"],
-		},
+		exclude: ["node_modules", "dist"],
 	},
-	plugins: [vue()],
+	plugins: [
+		vue({
+			reactivityTransform: true,
+		}),
+	],
 });
